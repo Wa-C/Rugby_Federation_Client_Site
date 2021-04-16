@@ -1,10 +1,38 @@
 import React from 'react';
+import ServiceDetail from '../ServiceDetail/ServiceDetail';
+
+
+const serviceData = [
+    {
+        name : 'First Aid In Rugby',
+        img: "https://i.ibb.co/rfC3krY/medicine-box-3d-illustration-first-260nw-1521789773.jpg" 
+    },
+    {
+        name : 'Player Welfare In Rugby',
+        img: "https://i.ibb.co/G3Bgbvk/player-welfare-rugby.jpg"
+    },
+    {
+        name : 'Anti Doping In Rugby',
+        img: "https://i.ibb.co/xLKX0cD/Keep-Rugby-Clean-logo-1024x651.jpg"
+    },
+]
+
+
+
 
 const Services = () => {
     return (
         <section className="services-container">
             <div className="text-center">
-            <h5 style={{ color: '#1CC7C1'}} >Our Services</h5>
+                <br></br>
+            <h1 className="mt-5 mb-3" style={{ color: '#1CC7C1'}} >Our Services</h1>
+            </div>
+            <div className="d-flex justify-content-center">
+            <div className="w-75 row">
+            {
+                serviceData.map(service => <ServiceDetail service={service}></ServiceDetail>)
+            }
+            </div>
             </div>
 
 
