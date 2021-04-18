@@ -11,14 +11,14 @@ const Header = () => {
                     <div className="container">
                         <div className="header-top">
                             <div className="row">
-                                <div className="col-md-6">
+                                <div className="col-md-4">
                                     <div className="full">
                                         <div className="logo">
                                             <a href="index.html"><img src="images/logo.png" alt="#" /></a>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-6">
+                                <div className="col-md-8">
                                     <div className="right_top_section">
                                         {/* <!-- social icon --> */}
                                         <ul className="social-icons pull-left">
@@ -34,6 +34,12 @@ const Header = () => {
                                                 <Link to="Login" className="login"><i className="fa fa-user"></i>Login</Link>
                                             </li>
                                             <li className="login-modal">
+                                                <Link to="Login" className="login"><i className="fa fa-user"></i>Admin</Link>
+                                            </li>
+                                            <li className="login-modal">
+                                                <Link to="/dashboard/bookings" className="login"><i className="fa fa-user"></i>Dashboard</Link>
+                                            </li>
+                                            <li className="Dashboard-modal">
                                                 <a href="#" className="login"><i className="fa fa-user"></i>{loggedInUser.name}</a>
                                             </li>
 
