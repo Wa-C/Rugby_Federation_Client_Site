@@ -1250,7 +1250,7 @@ section#contant h4 {
      position: absolute;
      bottom: 100%;
      left: 0;
-     background: #d8302f;
+     background: #0e0e50;
      z-index: 1;
      padding: 3px 20px 2px;
      text-transform: capitalize;
@@ -1265,7 +1265,7 @@ section#contant h4 {
     top: 1px;
     width: 0;
     height: 0;
-    border-bottom: 30px solid #d8302f;
+    border-bottom: 30px solid #2a0f5c;
     border-right: 20px solid transparent;
 }
  .team-column.style-2 .overlay {

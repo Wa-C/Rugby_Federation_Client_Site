@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import BookingsTable from './BookingsTable';
 import './table.css'
 
 const BookingsByUser = () => {
-
+    
     const [Bookings, setBookings] = useState([]);
 
     useEffect(() => {
+
         fetch('http://localhost:5000/bookingsByUser')
             .then(res => res.json())
             .then(data => setBookings(data))

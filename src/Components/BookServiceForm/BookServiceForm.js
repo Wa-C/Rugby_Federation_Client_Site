@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import Modal from 'react-modal';
+import { UserContext } from '../../App';
 
 const customStyles = {
     content: {
@@ -16,7 +17,9 @@ Modal.setAppElement('#root')
 
 const BookServiceForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
+    
     const onSubmit = data => {
         data.service = appointmentOn;
         data.created = new Date();

@@ -12,6 +12,9 @@ import Login from './Components/Login/Login';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AddReviews from './Components/addReviews/AddReviews';
+import AddService from './Components/AddService/AddService';
+import AddAdmin from './Components/AddAdmin/AddAdmin';
+import ManageService from './Components/Services/ManageService';
 
 export const UserContext = createContext();
 
@@ -39,8 +42,17 @@ function App() {
           <PrivateRoute exact path="/dashboard/bookings">
             <Dashboard />
           </PrivateRoute>
+          <PrivateRoute exact path="/addService">
+            <AddService />
+          </PrivateRoute>
+          <PrivateRoute exact path="/addAdmin">
+            <AddAdmin/>
+          </PrivateRoute>
           <PrivateRoute exact path="/addReviews">
             <AddReviews/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/manageService">
+            <ManageService/>
           </PrivateRoute>
           <Route exact path="/Login">
             <Login />

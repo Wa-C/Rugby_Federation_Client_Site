@@ -1,4 +1,5 @@
 import React from 'react';
+import RugbyCoach from '../Coach/RugbyCoach';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
@@ -9,6 +10,7 @@ const Home = () => {
         <div>
             <Header />
             <Services />
+            <RugbyCoach />
             <Testimonials />
             <Footer />
             
