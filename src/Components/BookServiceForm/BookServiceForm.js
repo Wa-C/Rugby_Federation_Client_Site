@@ -3,24 +3,26 @@ import { useForm } from "react-hook-form";
 import Modal from 'react-modal';
 import { UserContext } from '../../App';
 
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
-    }
-};
-Modal.setAppElement('#root')
+// const customStyles = {
+//     content: {
+//         top: '50%',
+//         left: '50%',
+//         right: 'auto',
+//         bottom: 'auto',
+//         marginRight: '-50%',
+//         transform: 'translate(-50%, -50%)'
+//     }
+// };
+// Modal.setAppElement('#root')
 
-const BookServiceForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
+const BookServiceForm = ({appointmentOn,servicePrice}) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    console.log(appointmentOn);
 
     
     const onSubmit = data => {
+        data.price = servicePrice;
         data.service = appointmentOn;
         data.created = new Date();
         fetch('http://localhost:5000/addBookings',{ 
@@ -31,26 +33,21 @@ const BookServiceForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
         .then(res => res.json())
         .then(success => {
             if(success){
-                closeModal();
+                
                 alert('Booking Done');
             }
         })
         
     };
     return (
-        <div>
+        <div className="row">
+        <div className='container col-md-6'>
             <div>
-
-                <Modal
-                    isOpen={modalIsOpen}
-
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="Example Modal"
-                >
 
                     <h2 className="text-brand text-center">{appointmentOn}</h2>
                     <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
+                    
+                    
                     <div className="form-group">
                             <input {...register("name", { required: true })} name="name" placeholder="Your Name" className="form-control" />
                             {/* errors will return when field validation fails  */}
@@ -90,8 +87,13 @@ const BookServiceForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
                         <button type="submit" className="btn btn-brand">Send</button>
                     </div>
                 </form>
-                </Modal>
+                
             </div>
+        </div>
+        <div className="col-md-6">
+            <h2>payment section</h2>
+            <h3>Payment = {servicePrice} </h3>
+        </div>
         </div>
     );
 };

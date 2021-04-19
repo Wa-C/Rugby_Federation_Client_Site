@@ -22,6 +22,9 @@ const BookingsTable = ({Bookings}) => {
       <td scope="row">{Bookings.name}</td>
       <td scope="row">{Bookings.email}</td>
       <td scope="row">{Bookings.phone}</td>
+      <td scope="row">{Bookings.service}</td>
+      <td scope="row">${Bookings.price}</td>
+
       
     </tr>
    

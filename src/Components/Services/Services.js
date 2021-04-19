@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import BookServiceForm from '../BookServiceForm/BookServiceForm';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 
@@ -41,7 +42,9 @@ const Services = () => {
             {
                 serviceData.map(service => <ServiceDetail service={service}></ServiceDetail>)
             }
+            
             </div>
+            
             </div>
 
 

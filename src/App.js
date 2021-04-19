@@ -15,6 +15,8 @@ import AddReviews from './Components/addReviews/AddReviews';
 import AddService from './Components/AddService/AddService';
 import AddAdmin from './Components/AddAdmin/AddAdmin';
 import ManageService from './Components/Services/ManageService';
+import BookServiceForm from './Components/BookServiceForm/BookServiceForm';
+import ShowBookService from './Components/ShowBookService/ShowBookService';
 
 export const UserContext = createContext();
 
@@ -53,6 +55,12 @@ function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/manageService">
             <ManageService/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/bookServiceForm">
+            <BookServiceForm/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/showBookService">
+            <ShowBookService/>
           </PrivateRoute>
           <Route exact path="/Login">
             <Login />

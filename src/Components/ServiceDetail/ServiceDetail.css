@@ -1,0 +1,8 @@
+.hover-animation:hover img, {
+    transform: scale(1.2);
+    transition: ease all 0.7s;
+}
+.hover-animation:hover{
+    transform: scale(1.2);
+    transition: ease all 0.7s;
+}
