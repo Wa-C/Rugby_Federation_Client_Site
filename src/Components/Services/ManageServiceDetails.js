@@ -4,7 +4,7 @@ const ManageServiceDetails = ({service}) => {
 
     function deleteService(id){
         // console.log(event.target);
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://cryptic-hamlet-54915.herokuapp.com/delete/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'

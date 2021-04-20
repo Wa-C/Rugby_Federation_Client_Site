@@ -29,7 +29,7 @@ const Testimonials = () => {
     const [testimonialsData, setTestimonialsData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviewsByUser')
+        fetch('https://cryptic-hamlet-54915.herokuapp.com/reviewsByUser')
             .then(res => res.json())
             .then(data => setTestimonialsData(data))
             // console.log(testimonialsData);

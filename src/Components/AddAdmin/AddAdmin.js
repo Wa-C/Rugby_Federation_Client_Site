@@ -11,7 +11,7 @@ const AddAdmin = () => {
       name: data.name,
       email: data.email       
     };
-    const url = `http://localhost:5000/addAdmin`
+    const url = `https://cryptic-hamlet-54915.herokuapp.com/addAdmin`
     console.log(productData);
 
     fetch(url, {

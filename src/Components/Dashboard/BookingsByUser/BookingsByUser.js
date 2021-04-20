@@ -10,7 +10,7 @@ const BookingsByUser = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/bookingsByUser')
+        fetch('https://cryptic-hamlet-54915.herokuapp.com/bookingsByUser')
             .then(res => res.json())
             .then(data => setBookings(data))
             // console.log(Bookings);

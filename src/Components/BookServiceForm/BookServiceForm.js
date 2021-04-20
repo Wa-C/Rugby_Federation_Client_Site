@@ -26,7 +26,7 @@ const BookServiceForm = ({appointmentOn,servicePrice}) => {
         data.price = servicePrice;
         data.service = appointmentOn;
         data.created = new Date();
-        fetch('http://localhost:5000/addBookings',{ 
+        fetch('https://cryptic-hamlet-54915.herokuapp.com/addBookings',{ 
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify(data)

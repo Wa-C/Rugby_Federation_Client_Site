@@ -13,7 +13,7 @@ const AddService = () => {
         price: data.price,
       imageURL: imageURL
     };
-    const url = `http://localhost:5000/addService`
+    const url = `https://cryptic-hamlet-54915.herokuapp.com/addService`
     console.log(productData);
 
     fetch(url, {

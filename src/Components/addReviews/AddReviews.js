@@ -15,7 +15,7 @@ const AddReviews = () => {
       description: data.description,
       imageURL: imageURL
     };
-    const url = `http://localhost:5000/addReviews`
+    const url = `https://cryptic-hamlet-54915.herokuapp.com/addReviews`
     console.log(productData);
 
     fetch(url, {
