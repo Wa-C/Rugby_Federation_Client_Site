@@ -1,5 +1,5 @@
 # Rugby_Federation_Client_Site
-###Features : 
+### Features : 
 * User & Admin Dashboard
 * Login Authentication System
 * Private Route
@@ -8,7 +8,7 @@
 * Admin & User both can add Reviews to the website
 * Strip Payment integration 
 
-##Project Details : 
+## Project Details : 
 * React JS
 * Express
 * Bootstrap
