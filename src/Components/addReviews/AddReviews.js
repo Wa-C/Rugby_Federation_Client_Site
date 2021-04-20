@@ -27,6 +27,7 @@ const AddReviews = () => {
       body: JSON.stringify(productData)
     })
       .then(res => console.log('server side res', res));
+      alert('Review Added')
   };
   const handleImageUpload = event => {
     console.log(event.target.files[0]);

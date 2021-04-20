@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import Modal from 'react-modal';
 import { UserContext } from '../../App';
+import ProcessPayment from '../ProcessPayment/ProcessPayment';
 
 // const customStyles = {
 //     content: {
@@ -34,9 +35,11 @@ const BookServiceForm = ({appointmentOn,servicePrice}) => {
         .then(success => {
             if(success){
                 
-                alert('Booking Done');
+               
             }
+            
         })
+        alert('Booking Done. Please Proceed to Payment');
         
     };
     return (
@@ -91,8 +94,9 @@ const BookServiceForm = ({appointmentOn,servicePrice}) => {
             </div>
         </div>
         <div className="col-md-6">
-            <h2>payment section</h2>
-            <h3>Payment = {servicePrice} </h3>
+            <h1>Payment</h1>
+            <h3>Payment = ${servicePrice} </h3>
+            <ProcessPayment />
         </div>
         </div>
     );

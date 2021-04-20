@@ -33,9 +33,7 @@ const Header = () => {
                                             <li className="login-modal">
                                                 <Link to="Login" className="login"><i className="fa fa-user"></i>Login</Link>
                                             </li>
-                                            <li className="login-modal">
-                                                <Link to="Login" className="login"><i className="fa fa-user"></i>Admin</Link>
-                                            </li>
+                                            
                                             <li className="login-modal">
                                                 <Link to="/dashboard/bookings" className="login"><i className="fa fa-user"></i>Dashboard</Link>
                                             </li>
